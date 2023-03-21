@@ -29,7 +29,16 @@
         };
 
         const Button = () => {
-          return <button>Comprar</button>;
+          const [counter, setCounter] = React.useState(0);
+          function comprar(e) { 
+            setCounter(counter + 1);
+          }
+          return (
+            <div>
+              <button onClick={comprar}>Comprar</button>
+              <p>Itens no carrinho: {counter}</p>
+              <p>Preço: R${counter * 250}</p>
+            </div>)
         };
 
         const App = () => {
@@ -37,10 +46,6 @@
             <div>
               <Title />
               <Button />    
-              <div>
-                Compre aqui também
-                <Button />
-              </div>
             </div>
           );
         };
