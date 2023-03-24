@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Evento = () => {
+const Eventos = () => {
 
     function handleClick(event) {
         console.log(event);
@@ -14,4 +14,4 @@ const Evento = () => {
     )
 }
 
-export default Evento;
+export default Eventos;
