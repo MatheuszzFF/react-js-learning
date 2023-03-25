@@ -3,7 +3,8 @@ import React from 'react'
 const Menu = () => {
     const menu = [
         {name: "Home", url: "/"},
-        {name: "Produtos", url: "/produtos"}
+        {name: "Produtos", url: "/produtos"},
+        {name: "Modal", url: "/modal"}
     ]
   return (
     <ul>

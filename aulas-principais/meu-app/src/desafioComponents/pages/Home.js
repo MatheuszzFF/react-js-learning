@@ -7,12 +7,14 @@ import Arrays from '../../Arrays';
 import Eventos from '../../Eventos';
 import Form from '../../form/Form';
 import Children from '../../Children';
+import ButtonUseState from '../partials/ButtonUseState';
 const Home = () => {
   return (
     <React.Fragment>
         <Header/>
         <Main>
             <Titulo>Essa é a HomePage</Titulo>
+            <ButtonUseState/>
             <DesafioMario/>
             <Arrays />
             <Eventos />
