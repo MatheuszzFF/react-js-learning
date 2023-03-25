@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../global/header/Header';
 import Main from '../global/Main';
-
+import Produto from '../partials/Produto'
 const Produtos = () => {
     const produtos = [
         { nome: 'Notebook', propriedades: ['16gb ram', '512gb'] },
@@ -11,18 +11,14 @@ const Produtos = () => {
     <Main>
         <Header />
         <section className="produtos">
-            {produtos.map(({nome, propriedades:[ram, hd]}, i) => {
-                return(
-                    <React.Fragment>
-                        <h3>{nome}</h3>
-                        <ul>
-                            <li key={'key'+ i}>{ram}</li>
-                            <li key={'key2'+ i}>{hd}</li>
-                        </ul>
-                    </React.Fragment>
-                )
+            <ul>
+                {produtos.map(({nome, propriedades}) => {
+                    return(
+                        <Produto nome={nome} propriedades={propriedades}/>
+                    )
 
-            })}
+                })}
+            </ul>
         </section>
     </Main>
   )

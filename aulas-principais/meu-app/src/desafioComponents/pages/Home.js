@@ -22,10 +22,8 @@ const Home = () => {
             <Children texto="Teste">
                 Teste de children
             </Children>
-			
         </Main>
     </React.Fragment>
-
   )
 }
 
