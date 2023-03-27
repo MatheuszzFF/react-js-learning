@@ -1,21 +1,23 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Menu = () => {
     const menu = [
         {name: "Home", url: "/"},
         {name: "Produtos", url: "/produtos"},
-        {name: "Modal", url: "/modal"}
     ]
   return (
-    <ul>
-        {menu.map(({name, url}) => {
-            return (
-                <li key={name}>
-                    <a href={url}>{name}</a>
-                </li>
-            )
-        })}
-    </ul>
+    <nav>
+        <ul>
+            {menu.map(({name, url}) => {
+                return (
+                    <li key={name}>
+                        <NavLink activeStyle={{color: 'green'}}to={url} end>{name}</NavLink>
+                    </li>
+                )
+            })}
+        </ul>
+    </nav>
   )
 }
 

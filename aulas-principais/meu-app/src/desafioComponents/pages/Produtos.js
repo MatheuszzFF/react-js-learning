@@ -1,9 +1,9 @@
 import React from 'react'
-import Header from '../global/header/Header';
 import Main from '../global/Main';
 import Button from '../partials/Button';
 import Modal from '../partials/Modal';
 import Produto from '../partials/Produto'
+import ProdutosApi from '../partials/ProdutosApi';
 
 
 const Produtos = () => {
@@ -14,7 +14,6 @@ const Produtos = () => {
     const [modal, setModal] = React.useState(false);
   return (
     <Main>
-        <Header />
         <section className="produtos">
             <ul>
                 {produtos.map(({nome, propriedades}) => {
@@ -29,6 +28,7 @@ const Produtos = () => {
             <Modal modal={modal} setModal={setModal}/>
             <Button setModal={setModal} modal={modal}>{modal ?  "Fechar modal!" : 'Abrir modal!'}</Button>
         </section>
+        <ProdutosApi/>
     </Main>
   )
 }
